@@ -2,10 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Evelyn 的 GitHub 主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evelyn's Homepage</title>
+  <style>
+    :root {
+      --bg-color: #FFF8F0;
+      --main-color: #FFB6B9;
+      --accent1: #FCD5CE;
+      --accent2: #A8DADC;
+      --text-color: #333333;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--main-color);
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: var(--accent2);
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      border: 6px solid var(--accent1);
+    }
+
+    .profile h2 {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      color: var(--main-color);
+    }
+
+    .profile p {
+      max-width: 600px;
+      margin: 0.5rem auto;
+      line-height: 1.6;
+    }
+
+    .projects {
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--main-color);
+    }
+
+    footer {
+      background: var(--accent2);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, 我是 Evelyn!</h1>
-  <p>欢迎来到我的 GitHub 个人主页。</p>
+
+  <!-- 头部 -->
+  <header>
+    Evelyn's Homepage
+  </header>
+
+  <!-- 导航栏 -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- 个人简介 -->
+  <section id="about" class="profile">
+    <img src="https://avatars.githubusercontent.com/evelyn77yu" alt="Evelyn's Avatar">
+    <h2>Hello, I'm Evelyn 👋</h2>
+    <p>
+      I’m passionate about <b>AI, electronics, and technology</b>.  
+      Currently pursuing my MSc in AI for Science at NUS, I enjoy combining theory with real-world applications.  
+      My background includes circuit design, PCB development, and data analysis, and I am exploring how AI can shape the future of engineering.
+    </p>
+  </section>
+
+  <!-- 项目展示 -->
+  <section id="projects" class="projects">
+    <div class="card">
+      <h3>Smart PCB Design</h3>
+      <p>Miniaturized 30x30mm circuit design ensuring signal quality and high-speed performance.</p>
+    </div>
+    <div class="card">
+      <h3>AI for Drone Systems</h3>
+      <p>Applied machine learning to optimize UAV sensor integration and improve communication efficiency.</p>
+    </div>
+    <div class="card">
+      <h3>Team Projects</h3>
+      <p>Check out our <a href="team.html" style="color: var(--accent2); font-weight: bold;">Team Homepage</a> for collaborative work.</p>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <footer id="contact">
+    <p>📧 Email: evelyn77yu@gamil.com</p>
+    <p>🌐 GitHub: <a href="https://github.com/evelyn77yu" style="color: white;">github.com/evelyn77yu</a></p>
+  </footer>
+
 </body>
 </html>
