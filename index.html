@@ -1,13 +1,392 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yu Dian Portfolio React UI</title>
-    <script type="module" crossorigin src="/assets/index-fyFA9Ooo.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-S5vOMhL7.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yu Dian — AI for Science · Product Prototyping</title>
+  <meta name="description" content="Yu Dian — MSc AI for Science @ NUS. AI workflows, data analysis, and product-facing prototypes bridging AI, electronics engineering, and hardware-aware systems." />
+  <link rel="icon" type="image/png" href="profile-avatar.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- decorative cursor trail canvas -->
+  <canvas id="trail-canvas" aria-hidden="true"></canvas>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top">
+        <span class="nav-logo-mark">YD</span>
+        <span class="nav-logo-text">yudian<span class="accent">.</span>dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">about()</a>
+        <a href="#skills">skills()</a>
+        <a href="#projects">projects()</a>
+        <a href="#experience">experience()</a>
+        <a href="#contact">contact()</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="mailto:e1553737@u.nus.edu">
+        <span>Say hi</span>
+        <span class="btn-arrow">↗</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+      <a href="#about">about()</a>
+      <a href="#skills">skills()</a>
+      <a href="#projects">projects()</a>
+      <a href="#experience">experience()</a>
+      <a href="#contact">contact()</a>
+      <a class="btn btn-primary" href="mailto:e1553737@u.nus.edu">Say hi ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero trail-area">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">init</span>()</p>
+          <h1 class="hero-title">Yu Dian</h1>
+          <p class="hero-kicker">AI WORKFLOWS · DATA ANALYSIS · PRODUCT-FACING PROTOTYPES</p>
+          <p class="hero-role">MSc AI for Science @ NUS.</p>
+          <p class="hero-bio">
+            I work with Python automation, LLM tools, data processing, UI-hardware prototyping, and
+            user-facing interfaces. My background connects AI, electronics engineering, medical data
+            workflows, and cross-functional product contexts.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View projects <span class="btn-arrow">→</span></a>
+            <a class="btn btn-ghost" href="#experience">View experience <span class="btn-arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="mascot-orbit">
+            <svg class="mascot" id="mascot" width="220" height="220" viewBox="0 0 220 220" fill="none">
+              <circle cx="110" cy="110" r="96" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.4" />
+              <circle cx="110" cy="110" r="66" stroke="currentColor" stroke-width="1.5" opacity="0.25" />
+              <g class="mascot-needle">
+                <path d="M110 30 L124 110 L110 124 L96 110 Z" fill="currentColor" />
+                <circle cx="110" cy="110" r="8" fill="currentColor" />
+              </g>
+            </svg>
+          </div>
+          <div class="code-card">
+            <div class="code-card-head">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="code-card-title">status.json</span>
+            </div>
+            <pre class="code-card-body"><span class="tok-k">{</span>
+  <span class="tok-p">"role"</span>: <span class="tok-s">"AI for Science, MSc"</span>,
+  <span class="tok-p">"focus"</span>: <span class="tok-s">["LLM eval", "medical imaging", "hw prototyping"]</span>,
+  <span class="tok-p">"status"</span>: <span class="tok-s">"open to RA / intern roles"</span>
+<span class="tok-k">}</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-strip reveal">
+        <div class="container info-strip-inner">
+          <div class="info-item"><span class="info-label">based in</span><span class="info-value">Singapore</span></div>
+          <span class="info-sep">/</span>
+          <div class="info-item"><span class="info-label">focus</span><span class="info-value">AI for Science</span></div>
+          <span class="info-sep">/</span>
+          <div class="info-item"><span class="info-label">status</span><span class="info-value">open to RA &amp; intern roles</span></div>
+          <span class="info-sep">/</span>
+          <div class="info-item"><span class="info-label">contact</span><span class="info-value">github.com/evelyn77yu</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>AI FOR SCIENCE</span><span class="ticker-star">✦</span>
+        <span>LLM EVALUATION</span><span class="ticker-star">✦</span>
+        <span>MEDICAL IMAGING</span><span class="ticker-star">✦</span>
+        <span>DATA ANALYSIS</span><span class="ticker-star">✦</span>
+        <span>UI-HARDWARE PROTOTYPING</span><span class="ticker-star">✦</span>
+        <span>PCB ENGINEERING</span><span class="ticker-star">✦</span>
+        <span>AI FOR SCIENCE</span><span class="ticker-star">✦</span>
+        <span>LLM EVALUATION</span><span class="ticker-star">✦</span>
+        <span>MEDICAL IMAGING</span><span class="ticker-star">✦</span>
+        <span>DATA ANALYSIS</span><span class="ticker-star">✦</span>
+        <span>UI-HARDWARE PROTOTYPING</span><span class="ticker-star">✦</span>
+        <span>PCB ENGINEERING</span><span class="ticker-star">✦</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT / EDUCATION ============ -->
+    <section class="section trail-area" id="about">
+      <div class="container">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">education</span>()</p>
+        <h2 class="section-title reveal">Education</h2>
+
+        <div class="river reveal">
+          <div class="river-visual">
+            <div class="glyph-card">
+              <span class="glyph">university-of-singapore.edu</span>
+              <span class="glyph-sub">2025 — 2027</span>
+            </div>
+          </div>
+          <div class="river-copy">
+            <h3>National University of Singapore</h3>
+            <p class="river-meta">AI for Science</p>
+            <p>Text Processing &amp; Interpretation with Machine Learning; Practical Machine Learning for
+              Scientific Discovery; Foundations of Deep Learning.</p>
+          </div>
+        </div>
+
+        <div class="river river-reverse reveal">
+          <div class="river-visual">
+            <div class="glyph-card glyph-card-alt">
+              <span class="glyph">beihang-university.edu</span>
+              <span class="glyph-sub">2019 — 2023</span>
+            </div>
+          </div>
+          <div class="river-copy">
+            <h3>Beihang University</h3>
+            <p class="river-meta">Electronic and Information Engineering</p>
+            <p>Programming in C; Electronic Circuit; Probability Theory and Mathematical Statistics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt trail-area" id="skills">
+      <div class="container">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">skills</span>()</p>
+        <h2 class="section-title reveal">What I work with</h2>
+        <div class="card-grid">
+          <div class="card reveal">
+            <h3>AI Workflow</h3>
+            <ul>
+              <li>Claude, ChatGPT, LLM APIs</li>
+              <li>Prompt engineering and Chain-of-Thought</li>
+              <li>RAG concepts and model evaluation</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Python &amp; Data</h3>
+            <ul>
+              <li>Python, SQL, Pandas, NumPy</li>
+              <li>Data cleaning and exploratory analysis</li>
+              <li>Metric design and automation workflows</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Product &amp; Documentation</h3>
+            <ul>
+              <li>HTML and JavaScript static webpages</li>
+              <li>UI prototyping and interaction logic</li>
+              <li>Markdown, LaTeX, workflow documentation</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Hardware &amp; Engineering</h3>
+            <ul>
+              <li>Arduino and embedded systems</li>
+              <li>USB serial communication</li>
+              <li>PCB design and low-power systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section trail-area" id="projects">
+      <div class="container">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">projects</span>()</p>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-sub reveal">AI systems across LLM evaluation and CNN-based medical imaging, with additional data systems work.</p>
+
+        <h3 class="group-title reveal">AI Systems</h3>
+        <div class="river reveal">
+          <div class="river-visual">
+            <div class="glyph-card">
+              <span class="glyph-tag">MEDICAL AI PIPELINE</span>
+              <span class="glyph-sub">Jan. 2026 – Present</span>
+            </div>
+          </div>
+          <div class="river-copy">
+            <h3>Brain MRI Segmentation &amp; Classification</h3>
+            <p>Multi-contrast brain MRI preprocessing and model-ready data preparation using large-scale
+              medical imaging data from the Hugging Face ecosystem.</p>
+            <ul>
+              <li>Python workflows for preprocessing, quality checking, and input preparation.</li>
+              <li>Standardized data preparation for CNN and deep learning experiments.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Deep Learning</span><span class="tag">Medical Imaging</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="river river-reverse reveal">
+          <div class="river-visual">
+            <div class="glyph-card glyph-card-alt">
+              <span class="glyph-tag">LLM EVALUATION</span>
+              <span class="glyph-sub">Mar. 2026 – May 2026</span>
+            </div>
+          </div>
+          <div class="river-copy">
+            <h3>Prompting Strategy Evaluation for LLM Reasoning Reliability</h3>
+            <p>Controlled evaluation pipeline comparing Direct Prompting, Zero-shot Chain-of-Thought,
+              Few-shot Chain-of-Thought, and Self-consistency Chain-of-Thought.</p>
+            <ul>
+              <li>Defined accuracy settings, category-level performance, visual outputs, and error cases.</li>
+              <li>Failure analysis of formatting issues and reasoning mistakes.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">LLM APIs</span><span class="tag">Prompt Engineering</span><span class="tag">CoT</span><span class="tag">Model Evaluation</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="group-title reveal">Data Systems</h3>
+        <div class="mini-card-grid">
+          <div class="mini-card reveal">
+            <span class="glyph-tag glyph-tag-sm">SCIENTIFIC ML</span>
+            <span class="mini-card-date">Aug. 2025 – Oct. 2025</span>
+            <h4>Scientific Data Representation and Unsupervised Pattern Discovery</h4>
+            <p>Converted Raman spectra, XFEL diffraction patterns, and 3D PXCT volumes into design matrices
+              for structured analysis and visualization.</p>
+            <div class="tag-row"><span class="tag">PCA / SVD</span><span class="tag">UMAP</span><span class="tag">Clustering</span></div>
+          </div>
+          <div class="mini-card reveal">
+            <span class="glyph-tag glyph-tag-sm">MULTIMODAL</span>
+            <span class="mini-card-date">Sep. 2025 – Oct. 2025</span>
+            <h4>Multimodal Sentiment Recognition Project</h4>
+            <p>Multimodal dataset processing for content understanding using text, image, and bounding-box
+              annotations for aspect-based sentiment analysis.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Data Cleaning</span><span class="tag">Annotation QA</span></div>
+          </div>
+          <div class="mini-card reveal">
+            <span class="glyph-tag glyph-tag-sm">NETWORK</span>
+            <span class="mini-card-date">Oct. 2025 – Dec. 2025</span>
+            <h4>Complex Network Modelling of P2P and Ethereum Systems</h4>
+            <p>Python scripts and reproducible pipelines for processing and analysing large-scale P2P and
+              Ethereum network data.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Graph Analysis</span><span class="tag">Visualization</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt trail-area" id="experience">
+      <div class="container">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">experience</span>()</p>
+        <h2 class="section-title reveal">Experience</h2>
+        <p class="section-sub reveal">Academic and industry work experience.</p>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Mar. 2026 – Present</span>
+              <h3>NUS Soft Technologies Lab · Research Assistant</h3>
+              <ul>
+                <li>Developed a UI-hardware interaction prototype enabling block-based programming and
+                  real-time visualization of Arduino-connected physical devices.</li>
+                <li>Integrated interface logic, device communication, and system feedback loops using
+                  JavaScript/HTML prototyping and AI-assisted development.</li>
+                <li>Maintained structured human-AI collaboration records for design traceability and handover.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Mar. 2025 – Jul. 2025</span>
+              <h3>Tsinghua University Brain-Machine Interface Lab · Research Assistant</h3>
+              <ul>
+                <li>Supported early-stage circuit design for a portable EEG system integrating edge AI signal
+                  processing under real-world hardware constraints.</li>
+                <li>Optimized low-power system architecture through component selection and system-level design.</li>
+                <li>Balanced performance, size, power consumption, and deployability while gaining hands-on
+                  troubleshooting experience.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Oct. 2023 – Oct. 2024</span>
+              <h3>Morningcore Technology · PCB Engineer</h3>
+              <ul>
+                <li>Contributed to automotive-grade SoC core board projects for UAV and V2X systems and
+                  co-developed validation scripts that reduced validation cycles by 50%.</li>
+                <li>Coordinated technical requirements, manufacturing constraints, and delivery priorities.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Feb. 2022 – Jul. 2023</span>
+              <h3>TP-LINK · PCB Engineer</h3>
+              <ul>
+                <li>Supported 100+ consumer electronics product projects and coordinated design, production,
+                  timeline, resource, and delivery requirements across four departments.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Mar. 2021 – Sep. 2021</span>
+              <h3>Shenzhen Leyi Network · Game Systems Designer</h3>
+              <ul>
+                <li>Conducted user behavior analysis and competitor research, then designed virtual economy
+                  systems, reward pacing, progression structures, and gameplay parameters.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact trail-area" id="contact">
+      <div class="container contact-inner">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">contact</span>()</p>
+        <h2 class="contact-title reveal">Let's build something<span class="accent">.</span></h2>
+        <p class="reveal">Open to research assistant and internship roles in AI for Science, applied ML,
+          and product-facing prototyping.</p>
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" href="mailto:e1553737@u.nus.edu">e1553737@u.nus.edu <span class="btn-arrow">↗</span></a>
+          <a class="btn btn-ghost" href="https://github.com/evelyn77yu" target="_blank" rel="noopener">github.com/evelyn77yu <span class="btn-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-avatar" src="profile-avatar.png" alt="Yu Dian avatar" />
+        <span>Yu Dian</span>
+      </div>
+      <p class="footer-note">Built with vanilla HTML/CSS/JS · Design inspired by GitHub Universe.</p>
+      <div class="footer-links">
+        <a href="https://github.com/evelyn77yu" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:e1553737@u.nus.edu">Email</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
 </html>
