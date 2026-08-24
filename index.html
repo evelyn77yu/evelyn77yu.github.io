@@ -78,10 +78,9 @@
           </div>
           <div class="mascot-frame" id="mascotFrame">
             <img class="mascot-avatar" src="profile-avatar.png" alt="" />
-            <div class="mascot-pointer" id="mascotPointer">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 1 L12 12 L8 9.5 L4 12 Z" fill="currentColor" />
-              </svg>
+            <div class="mascot-eyes" id="mascotEyes" aria-hidden="true">
+              <span class="eye"><span class="pupil"></span></span>
+              <span class="eye"><span class="pupil"></span></span>
             </div>
           </div>
           <div class="code-card">
@@ -173,7 +172,7 @@
         <h2 class="section-title reveal">Core AI engineering stack</h2>
         <p class="section-sub reveal">A focused stack for applied AI / LLM engineer roles — agents, retrieval,
           evaluation, and full-stack delivery — proven across research, hardware, and enterprise workflows.</p>
-        <div class="card-grid">
+        <div class="skills-grid">
           <div class="card reveal">
             <h3>LLM &amp; Agent Engineering</h3>
             <ul>
@@ -314,6 +313,7 @@
         <h2 class="section-title reveal">Experience</h2>
         <p class="section-sub reveal">Internships, research assistantships, and engineering roles.</p>
 
+        <h3 class="group-title reveal">AI, Research &amp; Verification</h3>
         <ol class="timeline">
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
@@ -372,17 +372,17 @@
               </ul>
             </div>
           </li>
+        </ol>
+
+        <h3 class="group-title reveal">Engineering &amp; Product Foundations</h3>
+        <ol class="timeline timeline-compact">
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date">2023.10 – 2024.10</span>
               <h3>China Information and Communication Technologies Group Subsidiary · PCB Engineer</h3>
-              <ul>
-                <li>Participated in automotive-grade SoC core-board projects for UAV and V2X applications,
-                  handling PCB design, design checks, and cross-team technical handoff.</li>
-                <li>Built and promoted internal scripted checks and review checklists that improved
-                  schematic/PCB review and repetitive verification handoff.</li>
-              </ul>
+              <p class="timeline-summary">Automotive-grade SoC core-board design for UAV/V2X systems; built
+                scripted review checklists that streamlined schematic/PCB verification handoff.</p>
             </div>
           </li>
           <li class="timeline-item reveal">
@@ -390,10 +390,8 @@
             <div class="timeline-content">
               <span class="timeline-date">2022.02 – 2023.07</span>
               <h3>TP-LINK · PCB Engineer</h3>
-              <ul>
-                <li>Handled 100+ consumer electronics PCB projects including routers, cameras, switches, and
-                  power products, collaborating with mechanical, engineering, product, and manufacturing teams.</li>
-              </ul>
+              <p class="timeline-summary">Delivered 100+ consumer electronics PCB projects, coordinating design,
+                production, and delivery across mechanical, engineering, and manufacturing teams.</p>
             </div>
           </li>
           <li class="timeline-item reveal">
@@ -401,10 +399,8 @@
             <div class="timeline-content">
               <span class="timeline-date">2021.03 – 2021.09</span>
               <h3>Shenzhen Leyi Network Co., Ltd. · Game System Designer</h3>
-              <ul>
-                <li>Designed gameplay systems, numerical balance, and virtual economy based on user behavior
-                  analysis and competitor research, building product judgment from ambiguous user needs.</li>
-              </ul>
+              <p class="timeline-summary">Designed gameplay systems, numerical balance, and virtual economy
+                based on user behavior analysis and competitor research.</p>
             </div>
           </li>
         </ol>
@@ -412,21 +408,16 @@
     </section>
 
     <!-- ============ ADDITIONAL ============ -->
-    <section class="section" id="more">
+    <section class="section section-tight" id="more">
       <div class="container">
         <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">more</span>()</p>
         <h2 class="section-title reveal">A little more</h2>
-        <div class="card-grid">
+        <div class="more-grid">
           <div class="card reveal">
-            <h3>AI Application Interest</h3>
-            <p>Exploring AI Agent, RAG, multimodal, and hardware workflow applications that turn user needs
-              into usable prototypes — including agent-controlled KiCad/EDA workflow exploration.</p>
-          </div>
-          <div class="card reveal">
-            <h3>Portfolio Deck</h3>
-            <p>A concise slide portfolio walking through the Playcuit AI Assistant product story, from
-              feature design to context-aware debugging UX.</p>
-            <a class="btn btn-ghost" href="https://docs.google.com/presentation/d/1BRf9QQl-jkg2S6Ami8ydu_5oWBn5sBfneaTeVpA86V4/edit?usp=sharing" target="_blank" rel="noopener">View AI product portfolio <span class="btn-arrow">↗</span></a>
+            <h3>What I'm exploring now</h3>
+            <p>AI Agent, RAG, and multimodal workflow applications that turn ambiguous needs into usable
+              prototypes — including agent-controlled KiCad/EDA workflow exploration and a personal
+              AI-RAG-Resume tool.</p>
           </div>
           <div class="card reveal">
             <h3>Languages &amp; Awards</h3>

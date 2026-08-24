@@ -248,19 +248,40 @@ a { color: inherit; }
   box-shadow: 0 16px 30px -14px rgba(23, 25, 37, 0.45);
   background: var(--surface);
 }
-.mascot-pointer {
+.mascot-eyes {
   position: absolute;
-  right: -6px;
+  right: -8px;
   bottom: -6px;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 7px;
+  border: 2px solid var(--bg);
+  box-shadow: 0 6px 14px -6px rgba(23, 25, 37, 0.5);
+}
+.mascot-eyes .eye {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: block;
+}
+.mascot-eyes .pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--ink);
-  color: var(--accent-light);
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--bg);
-  transition: transform 0.05s linear;
+  transform: translate(-50%, -50%);
+  will-change: transform;
 }
 
 .code-card {
@@ -335,6 +356,7 @@ a { color: inherit; }
 
 /* ===================== sections ===================== */
 .section { padding: 96px 0; }
+.section-tight { padding: 64px 0; }
 .section-alt { background: var(--bg-alt); }
 .section-title {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
@@ -402,10 +424,16 @@ a { color: inherit; }
 }
 
 /* card grid (skills) */
-.card-grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 860px;
 }
 .card {
   background: var(--surface);
@@ -427,7 +455,7 @@ a { color: inherit; }
 /* mini card grid (data systems) */
 .mini-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .mini-card {
@@ -476,6 +504,12 @@ a { color: inherit; }
 .timeline-subtitle { font-style: italic; color: var(--muted); font-size: 0.9rem; margin: -4px 0 10px; }
 .timeline-content ul { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
 .timeline-content li + li { margin-top: 6px; }
+
+/* condensed timeline group (earlier engineering roles) */
+.timeline-compact .timeline-item { margin-bottom: 26px; }
+.timeline-compact .timeline-dot { width: 11px; height: 11px; border-color: var(--muted-2); }
+.timeline-compact .timeline-content h3 { margin: 2px 0 6px; font-size: 0.98rem; color: var(--ink-soft); }
+.timeline-summary { margin: 0; color: var(--muted); font-size: 0.88rem; }
 .timeline-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -538,6 +572,13 @@ a { color: inherit; }
   .hero-visual { order: -1; }
   .river, .river-reverse { grid-template-columns: 1fr; direction: ltr; }
   .river-visual { order: 0; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .mini-card-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .more-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

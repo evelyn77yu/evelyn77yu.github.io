@@ -51,12 +51,15 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* ---------- mascot: avatar tilts and its badge points toward the cursor ---------- */
+  /* ---------- mascot: avatar stays put, googly eyes glance toward the cursor ---------- */
   const mascotFrame = document.getElementById("mascotFrame");
-  const pointer = document.getElementById("mascotPointer");
-  if (mascotFrame && pointer && !isTouch) {
-    let targetAngle = 0;
-    let currentAngle = 0;
+  const eyesBadge = document.getElementById("mascotEyes");
+  const pupils = eyesBadge ? eyesBadge.querySelectorAll(".pupil") : [];
+  if (mascotFrame && eyesBadge && pupils.length && !isTouch) {
+    let targetPupilX = 0;
+    let targetPupilY = 0;
+    let currentPupilX = 0;
+    let currentPupilY = 0;
     let targetTiltX = 0;
     let targetTiltY = 0;
     let currentTiltX = 0;
@@ -65,29 +68,32 @@
     const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
     const updateTarget = (clientX, clientY) => {
-      const rect = pointer.getBoundingClientRect();
+      const rect = eyesBadge.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
-      targetAngle = (Math.atan2(clientY - cy, clientX - cx) * 180) / Math.PI + 90;
+      const angle = Math.atan2(clientY - cy, clientX - cx);
+      targetPupilX = Math.cos(angle) * 2.6;
+      targetPupilY = Math.sin(angle) * 2.6;
 
       const frameRect = mascotFrame.getBoundingClientRect();
       const fcx = frameRect.left + frameRect.width / 2;
       const fcy = frameRect.top + frameRect.height / 2;
-      targetTiltX = clamp((clientX - fcx) / 60, -8, 8);
-      targetTiltY = clamp((clientY - fcy) / 60, -8, 8);
+      targetTiltX = clamp((clientX - fcx) / 90, -6, 6);
+      targetTiltY = clamp((clientY - fcy) / 90, -6, 6);
     };
 
     window.addEventListener("mousemove", (e) => updateTarget(e.clientX, e.clientY), { passive: true });
 
     const animate = () => {
-      let delta = targetAngle - currentAngle;
-      delta = ((delta + 180) % 360 + 360) % 360 - 180;
-      currentAngle += delta * 0.08;
-      pointer.style.transform = `rotate(${currentAngle}deg)`;
+      currentPupilX += (targetPupilX - currentPupilX) * 0.15;
+      currentPupilY += (targetPupilY - currentPupilY) * 0.15;
+      pupils.forEach((pupil) => {
+        pupil.style.transform = `translate(calc(-50% + ${currentPupilX}px), calc(-50% + ${currentPupilY}px))`;
+      });
 
       currentTiltX += (targetTiltX - currentTiltX) * 0.06;
       currentTiltY += (targetTiltY - currentTiltY) * 0.06;
-      mascotFrame.style.transform = `translate(64px, -56px) translate(${currentTiltX}px, ${currentTiltY}px) rotate(${currentTiltX * 0.6}deg)`;
+      mascotFrame.style.transform = `translate(64px, -56px) translate(${currentTiltX}px, ${currentTiltY}px)`;
 
       requestAnimationFrame(animate);
     };
