@@ -505,36 +505,32 @@ a { color: inherit; }
 .timeline-content ul { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
 .timeline-content li + li { margin-top: 6px; }
 
-/* condensed timeline group (earlier engineering roles) */
-.timeline-compact .timeline-item { margin-bottom: 26px; }
-.timeline-compact .timeline-dot { width: 11px; height: 11px; border-color: var(--muted-2); }
-.timeline-compact .timeline-content h3 { margin: 2px 0 6px; font-size: 0.98rem; color: var(--ink-soft); }
-.timeline-summary { margin: 0; color: var(--muted); font-size: 0.88rem; }
-.timeline-gallery {
+/* engineering background (distinct card format, not a timeline) */
+.bg-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
-  margin-top: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-.timeline-gallery figure {
-  margin: 0;
+.bg-item {
   background: var(--surface);
   border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
   border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  padding: 24px;
 }
-.timeline-gallery figure:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px -20px rgba(23, 25, 37, 0.25);
-}
-.timeline-gallery img { width: 100%; height: 140px; object-fit: cover; object-position: top left; display: block; }
-.timeline-gallery figcaption {
-  padding: 8px 12px;
+.bg-date {
+  display: inline-block;
   font-family: var(--mono);
   font-size: 0.72rem;
-  color: var(--muted);
+  color: var(--accent-deep);
+  background: var(--bg-alt);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
 }
+.bg-role { margin: 0 0 2px; font-size: 1.05rem; }
+.bg-org { margin: 0 0 10px; color: var(--muted); font-size: 0.85rem; }
+.bg-item p:last-child { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
 
 /* contact */
 .contact { text-align: center; }
@@ -579,6 +575,7 @@ a { color: inherit; }
 @media (max-width: 600px) {
   .skills-grid { grid-template-columns: 1fr; }
   .more-grid { grid-template-columns: 1fr; }
+  .bg-list { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
