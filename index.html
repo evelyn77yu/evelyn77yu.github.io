@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yu Dian — AI for Science · Product Prototyping</title>
-  <meta name="description" content="Yu Dian — MSc AI for Science @ NUS. AI workflows, data analysis, and product-facing prototypes bridging AI, electronics engineering, and hardware-aware systems." />
+  <meta name="description" content="Yu Dian — MSc AI for Science @ NUS. LLM agent engineering, RAG, and applied ML, shipped into real engineering products across research, enterprise, and hardware-aware contexts." />
   <link rel="icon" type="image/png" href="profile-avatar.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +28,7 @@
         <a href="#skills">skills()</a>
         <a href="#projects">projects()</a>
         <a href="#experience">experience()</a>
+        <a href="#more">more()</a>
         <a href="#contact">contact()</a>
       </nav>
       <a class="btn btn-primary nav-cta" href="mailto:e1553737@u.nus.edu">
@@ -43,6 +44,7 @@
       <a href="#skills">skills()</a>
       <a href="#projects">projects()</a>
       <a href="#experience">experience()</a>
+      <a href="#more">more()</a>
       <a href="#contact">contact()</a>
       <a class="btn btn-primary" href="mailto:e1553737@u.nus.edu">Say hi ↗</a>
     </nav>
@@ -55,12 +57,13 @@
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">init</span>()</p>
           <h1 class="hero-title">Yu Dian</h1>
-          <p class="hero-kicker">AI WORKFLOWS · DATA ANALYSIS · PRODUCT-FACING PROTOTYPES</p>
+          <p class="hero-kicker">LLM AGENTS · RAG ENGINEERING · APPLIED ML · VERIFICATION AUTOMATION</p>
           <p class="hero-role">MSc AI for Science @ NUS.</p>
           <p class="hero-bio">
-            I work with Python automation, LLM tools, data processing, UI-hardware prototyping, and
-            user-facing interfaces. My background connects AI, electronics engineering, medical data
-            workflows, and cross-functional product contexts.
+            I build and evaluate LLM agent systems — from retrieval-augmented assistants to tool-calling
+            workflows — and ship them into real engineering products. My background spans applied ML
+            research, semiconductor verification automation, and hardware-aware prototyping, giving me
+            range across research, enterprise, and product contexts.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View projects <span class="btn-arrow">→</span></a>
@@ -70,14 +73,16 @@
 
         <div class="hero-visual reveal" aria-hidden="true">
           <div class="mascot-orbit">
-            <svg class="mascot" id="mascot" width="220" height="220" viewBox="0 0 220 220" fill="none">
-              <circle cx="110" cy="110" r="96" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.4" />
-              <circle cx="110" cy="110" r="66" stroke="currentColor" stroke-width="1.5" opacity="0.25" />
-              <g class="mascot-needle">
-                <path d="M110 30 L124 110 L110 124 L96 110 Z" fill="currentColor" />
-                <circle cx="110" cy="110" r="8" fill="currentColor" />
-              </g>
-            </svg>
+            <span class="ring ring-1"></span>
+            <span class="ring ring-2"></span>
+          </div>
+          <div class="mascot-frame" id="mascotFrame">
+            <img class="mascot-avatar" src="profile-avatar.png" alt="" />
+            <div class="mascot-pointer" id="mascotPointer">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 1 L12 12 L8 9.5 L4 12 Z" fill="currentColor" />
+              </svg>
+            </div>
           </div>
           <div class="code-card">
             <div class="code-card-head">
@@ -86,8 +91,8 @@
             </div>
             <pre class="code-card-body"><span class="tok-k">{</span>
   <span class="tok-p">"role"</span>: <span class="tok-s">"AI for Science, MSc"</span>,
-  <span class="tok-p">"focus"</span>: <span class="tok-s">["LLM eval", "medical imaging", "hw prototyping"]</span>,
-  <span class="tok-p">"status"</span>: <span class="tok-s">"open to RA / intern roles"</span>
+  <span class="tok-p">"focus"</span>: <span class="tok-s">["agentic AI", "RAG", "verification automation"]</span>,
+  <span class="tok-p">"status"</span>: <span class="tok-s">"AI-enabled Formal Verification Intern @ Infineon"</span>
 <span class="tok-k">}</span></pre>
           </div>
         </div>
@@ -97,9 +102,9 @@
         <div class="container info-strip-inner">
           <div class="info-item"><span class="info-label">based in</span><span class="info-value">Singapore</span></div>
           <span class="info-sep">/</span>
-          <div class="info-item"><span class="info-label">focus</span><span class="info-value">AI for Science</span></div>
+          <div class="info-item"><span class="info-label">focus</span><span class="info-value">Agentic AI &amp; RAG</span></div>
           <span class="info-sep">/</span>
-          <div class="info-item"><span class="info-label">status</span><span class="info-value">open to RA &amp; intern roles</span></div>
+          <div class="info-item"><span class="info-label">status</span><span class="info-value">Formal Verification Intern @ Infineon</span></div>
           <span class="info-sep">/</span>
           <div class="info-item"><span class="info-label">contact</span><span class="info-value">github.com/evelyn77yu</span></div>
         </div>
@@ -109,18 +114,18 @@
     <!-- ============ TICKER ============ -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
-        <span>AI FOR SCIENCE</span><span class="ticker-star">✦</span>
+        <span>AGENTIC AI</span><span class="ticker-star">✦</span>
+        <span>RAG &amp; LANGCHAIN</span><span class="ticker-star">✦</span>
         <span>LLM EVALUATION</span><span class="ticker-star">✦</span>
-        <span>MEDICAL IMAGING</span><span class="ticker-star">✦</span>
-        <span>DATA ANALYSIS</span><span class="ticker-star">✦</span>
-        <span>UI-HARDWARE PROTOTYPING</span><span class="ticker-star">✦</span>
-        <span>PCB ENGINEERING</span><span class="ticker-star">✦</span>
-        <span>AI FOR SCIENCE</span><span class="ticker-star">✦</span>
+        <span>SEMICONDUCTOR VERIFICATION</span><span class="ticker-star">✦</span>
+        <span>MULTIMODAL DATA</span><span class="ticker-star">✦</span>
+        <span>EEG &amp; EDGE HARDWARE</span><span class="ticker-star">✦</span>
+        <span>AGENTIC AI</span><span class="ticker-star">✦</span>
+        <span>RAG &amp; LANGCHAIN</span><span class="ticker-star">✦</span>
         <span>LLM EVALUATION</span><span class="ticker-star">✦</span>
-        <span>MEDICAL IMAGING</span><span class="ticker-star">✦</span>
-        <span>DATA ANALYSIS</span><span class="ticker-star">✦</span>
-        <span>UI-HARDWARE PROTOTYPING</span><span class="ticker-star">✦</span>
-        <span>PCB ENGINEERING</span><span class="ticker-star">✦</span>
+        <span>SEMICONDUCTOR VERIFICATION</span><span class="ticker-star">✦</span>
+        <span>MULTIMODAL DATA</span><span class="ticker-star">✦</span>
+        <span>EEG &amp; EDGE HARDWARE</span><span class="ticker-star">✦</span>
       </div>
     </div>
 
@@ -134,7 +139,7 @@
           <div class="river-visual">
             <div class="glyph-card">
               <span class="glyph">university-of-singapore.edu</span>
-              <span class="glyph-sub">2025 — 2027</span>
+              <span class="glyph-sub">2025.08 — Present</span>
             </div>
           </div>
           <div class="river-copy">
@@ -149,7 +154,7 @@
           <div class="river-visual">
             <div class="glyph-card glyph-card-alt">
               <span class="glyph">beihang-university.edu</span>
-              <span class="glyph-sub">2019 — 2023</span>
+              <span class="glyph-sub">2016.09 — 2020.06</span>
             </div>
           </div>
           <div class="river-copy">
@@ -165,38 +170,56 @@
     <section class="section section-alt" id="skills">
       <div class="container">
         <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">skills</span>()</p>
-        <h2 class="section-title reveal">What I work with</h2>
+        <h2 class="section-title reveal">Core AI engineering stack</h2>
+        <p class="section-sub reveal">A focused stack for applied AI / LLM engineer roles — agents, retrieval,
+          evaluation, and full-stack delivery — proven across research, hardware, and enterprise workflows.</p>
         <div class="card-grid">
           <div class="card reveal">
-            <h3>AI Workflow</h3>
+            <h3>LLM &amp; Agent Engineering</h3>
             <ul>
-              <li>Claude, ChatGPT, LLM APIs</li>
-              <li>Prompt engineering and Chain-of-Thought</li>
-              <li>RAG concepts and model evaluation</li>
+              <li>Multi-step agent workflows, tool/function calling, structured outputs</li>
+              <li>Memory &amp; context design, human-in-the-loop guardrails</li>
+              <li>Shipped in enterprise verification automation, engineering assistants, and personal AI tools</li>
             </ul>
           </div>
           <div class="card reveal">
-            <h3>Python &amp; Data</h3>
+            <h3>RAG &amp; Context Engineering</h3>
             <ul>
-              <li>Python, SQL, Pandas, NumPy</li>
-              <li>Data cleaning and exploratory analysis</li>
-              <li>Metric design and automation workflows</li>
+              <li>LangChain/LlamaIndex retrieval pipelines, chunking, embeddings, vector databases</li>
+              <li>Context-window design and hallucination reduction</li>
+              <li>Applied to debugging assistants, knowledge retrieval, and resume/JD matching tools</li>
             </ul>
           </div>
           <div class="card reveal">
-            <h3>Product &amp; Documentation</h3>
+            <h3>Prompting &amp; Model Evaluation</h3>
             <ul>
-              <li>HTML and JavaScript static webpages</li>
-              <li>UI prototyping and interaction logic</li>
-              <li>Markdown, LaTeX, workflow documentation</li>
+              <li>System/task prompt design, Few-shot, CoT, Self-consistency CoT</li>
+              <li>Systematic accuracy and error-case / failure-mode analysis</li>
+              <li>Turns evaluation results into iteration loops for reliability improvement</li>
             </ul>
           </div>
           <div class="card reveal">
-            <h3>Hardware &amp; Engineering</h3>
+            <h3>Applied ML &amp; Deep Learning</h3>
             <ul>
-              <li>Arduino and embedded systems</li>
-              <li>USB serial communication</li>
-              <li>PCB design and low-power systems</li>
+              <li>Transformers, attention, embeddings, representation learning</li>
+              <li>PyTorch, multimodal preprocessing, Python/Pandas/NumPy/SQL analysis</li>
+              <li>Applied to medical imaging, sentiment/network data, and reasoning-reliability research</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Full-Stack AI Product Engineering</h3>
+            <ul>
+              <li>Python, JavaScript/TypeScript, React, FastAPI/Node.js</li>
+              <li>LLM APIs (OpenAI/Azure), REST, SQL/NoSQL, Docker, Git, cloud deployment</li>
+              <li>Turns model capability into working, user-facing prototypes end to end</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Cross-Domain Delivery</h3>
+            <ul>
+              <li>Stakeholder-facing problem decomposition and live workflow debugging</li>
+              <li>Documentation, traceability, and feedback-driven iteration</li>
+              <li>Proven across semiconductor verification, embedded/hardware, and product contexts</li>
             </ul>
           </div>
         </div>
@@ -207,24 +230,25 @@
     <section class="section" id="projects">
       <div class="container">
         <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">projects</span>()</p>
-        <h2 class="section-title reveal">Projects</h2>
-        <p class="section-sub reveal">AI systems across LLM evaluation and CNN-based medical imaging, with additional data systems work.</p>
+        <h2 class="section-title reveal">Research &amp; Course Projects</h2>
+        <p class="section-sub reveal">AI and model-evaluation work across medical imaging and LLM reliability, plus data/network systems and personal tooling.</p>
 
-        <h3 class="group-title reveal">AI Systems</h3>
+        <h3 class="group-title reveal">AI &amp; Model Projects</h3>
         <div class="river reveal">
           <div class="river-visual">
             <div class="glyph-card">
               <span class="glyph-tag">MEDICAL AI PIPELINE</span>
-              <span class="glyph-sub">Jan. 2026 – Present</span>
+              <span class="glyph-sub">Jan. 2026 – Present · NUS Medicine and Engineering</span>
             </div>
           </div>
           <div class="river-copy">
-            <h3>Brain MRI Segmentation &amp; Classification</h3>
-            <p>Multi-contrast brain MRI preprocessing and model-ready data preparation using large-scale
-              medical imaging data from the Hugging Face ecosystem.</p>
+            <h3>Brain MRI Image Processing and Pretraining</h3>
+            <p>Python workflows for MRI preprocessing, standardization, quality checking, and experiment
+              sample generation to support deep learning training, inference experiments, and reproducible
+              experiment management.</p>
             <ul>
-              <li>Python workflows for preprocessing, quality checking, and input preparation.</li>
-              <li>Standardized data preparation for CNN and deep learning experiments.</li>
+              <li>Organized multimodal imaging inputs and quality-check records.</li>
+              <li>Strengthened model input design, data quality, and pretraining workflow validation.</li>
             </ul>
             <div class="tag-row">
               <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Deep Learning</span><span class="tag">Medical Imaging</span>
@@ -236,16 +260,16 @@
           <div class="river-visual">
             <div class="glyph-card glyph-card-alt">
               <span class="glyph-tag">LLM EVALUATION</span>
-              <span class="glyph-sub">Mar. 2026 – May 2026</span>
+              <span class="glyph-sub">Mar. 2026 – May 2026 · Course Project</span>
             </div>
           </div>
           <div class="river-copy">
-            <h3>Prompting Strategy Evaluation for LLM Reasoning Reliability</h3>
-            <p>Controlled evaluation pipeline comparing Direct Prompting, Zero-shot Chain-of-Thought,
-              Few-shot Chain-of-Thought, and Self-consistency Chain-of-Thought.</p>
+            <h3>LLM Reasoning Reliability and Prompt Strategy Evaluation</h3>
+            <p>Evaluation workflow comparing Direct Prompting, Zero-shot Chain-of-Thought, Few-shot
+              Chain-of-Thought, and Self-consistency Chain-of-Thought across reasoning tasks.</p>
             <ul>
-              <li>Defined accuracy settings, category-level performance, visual outputs, and error cases.</li>
-              <li>Failure analysis of formatting issues and reasoning mistakes.</li>
+              <li>Summarized model behavior, format-following issues, and hallucination-style failure cases.</li>
+              <li>Turned error patterns into prompt iteration notes for agent-output quality checks.</li>
             </ul>
             <div class="tag-row">
               <span class="tag">LLM APIs</span><span class="tag">Prompt Engineering</span><span class="tag">CoT</span><span class="tag">Model Evaluation</span>
@@ -253,31 +277,31 @@
           </div>
         </div>
 
-        <h3 class="group-title reveal">Data Systems</h3>
+        <h3 class="group-title reveal">Data, Network &amp; Personal Tools</h3>
         <div class="mini-card-grid">
           <div class="mini-card reveal">
-            <span class="glyph-tag glyph-tag-sm">SCIENTIFIC ML</span>
-            <span class="mini-card-date">Aug. 2025 – Oct. 2025</span>
-            <h4>Scientific Data Representation and Unsupervised Pattern Discovery</h4>
-            <p>Converted Raman spectra, XFEL diffraction patterns, and 3D PXCT volumes into design matrices
-              for structured analysis and visualization.</p>
-            <div class="tag-row"><span class="tag">PCA / SVD</span><span class="tag">UMAP</span><span class="tag">Clustering</span></div>
-          </div>
-          <div class="mini-card reveal">
             <span class="glyph-tag glyph-tag-sm">MULTIMODAL</span>
-            <span class="mini-card-date">Sep. 2025 – Oct. 2025</span>
-            <h4>Multimodal Sentiment Recognition Project</h4>
-            <p>Multimodal dataset processing for content understanding using text, image, and bounding-box
-              annotations for aspect-based sentiment analysis.</p>
+            <span class="mini-card-date">Sep. 2025 – Oct. 2025 · ZhangLab, NUS SoC</span>
+            <h4>Multimodal Content Understanding Data Processing</h4>
+            <p>Processed text, image, and bounding-box annotation datasets; built Python cleaning workflows
+              to align text aspects with visual regions and validate multimodal consistency.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Data Cleaning</span><span class="tag">Annotation QA</span></div>
           </div>
           <div class="mini-card reveal">
             <span class="glyph-tag glyph-tag-sm">NETWORK</span>
-            <span class="mini-card-date">Oct. 2025 – Dec. 2025</span>
-            <h4>Complex Network Modelling of P2P and Ethereum Systems</h4>
-            <p>Python scripts and reproducible pipelines for processing and analysing large-scale P2P and
-              Ethereum network data.</p>
+            <span class="mini-card-date">Oct. 2025 – Dec. 2025 · Course Project</span>
+            <h4>Ethereum P2P Large-Scale Network Data Analysis</h4>
+            <p>Python-based P2P network analysis and simulation framework using real Ethereum network data:
+              topology construction, metric calculation, visualization, and propagation simulation.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Graph Analysis</span><span class="tag">Visualization</span></div>
+          </div>
+          <div class="mini-card reveal">
+            <span class="glyph-tag glyph-tag-sm">PERSONAL TOOL</span>
+            <span class="mini-card-date">Ongoing · Side Project</span>
+            <h4>AI-RAG-Resume</h4>
+            <p>Personal AI tool using LangChain/LlamaIndex-based RAG, vector retrieval, and matching scores
+              with LLM APIs to assist JD parsing, project recommendation, and resume version management.</p>
+            <div class="tag-row"><span class="tag">RAG</span><span class="tag">Vector Search</span><span class="tag">LLM APIs</span></div>
           </div>
         </div>
       </div>
@@ -288,72 +312,131 @@
       <div class="container">
         <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">experience</span>()</p>
         <h2 class="section-title reveal">Experience</h2>
-        <p class="section-sub reveal">Academic and industry work experience.</p>
+        <p class="section-sub reveal">Internships, research assistantships, and engineering roles.</p>
 
         <ol class="timeline">
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Mar. 2026 – Present</span>
-              <h3>NUS Soft Technologies Lab · Research Assistant</h3>
+              <span class="timeline-date">2026.07 – Present</span>
+              <h3>Infineon Technologies · AI-enabled Formal Verification Intern</h3>
               <ul>
-                <li>Developed a UI-hardware interaction prototype enabling block-based programming and
-                  real-time visualization of Arduino-connected physical devices.</li>
-                <li>Integrated interface logic, device communication, and system feedback loops using
-                  JavaScript/HTML prototyping and AI-assisted development.</li>
-                <li>Maintained structured human-AI collaboration records for design traceability and handover.</li>
+                <li>Worked with Unix/Linux, GitLab, Jira, CI/CD, and scripted workflows in formal verification
+                  processes involving vPlan tracking, version collaboration, test checks, and verification delivery.</li>
+                <li>Supported agent-assisted workflow optimization for XML-to-vPlan comparison, distribution,
+                  change synchronization, and function checks, integrating agent patterns, skill constraints,
+                  MCP-style tool integration, and structured output/function calling.</li>
+                <li>Practiced integrating AI tools into engineering workflows with attention to traceability,
+                  repeatability, failure investigation, and human-in-the-loop quality control.</li>
               </ul>
             </div>
           </li>
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Mar. 2025 – Jul. 2025</span>
-              <h3>Tsinghua University Brain-Machine Interface Lab · Research Assistant</h3>
+              <span class="timeline-date">2026.03 – Present</span>
+              <h3>NUS Soft Technologies Lab · Part-time Research Assistant</h3>
+              <p class="timeline-subtitle">Playcuit AI Assistant — context-aware agent prototype for engineering workflows</p>
               <ul>
-                <li>Supported early-stage circuit design for a portable EEG system integrating edge AI signal
-                  processing under real-world hardware constraints.</li>
-                <li>Optimized low-power system architecture through component selection and system-level design.</li>
-                <li>Balanced performance, size, power consumption, and deployability while gaining hands-on
-                  troubleshooting experience.</li>
+                <li>Designed and implemented a software-hardware engineering platform combining block-style
+                  programming, hardware topology, node status, and runtime feedback for physical-node
+                  development and validation.</li>
+                <li>Built an AI assistant layer using OpenAI/Azure OpenAI APIs, LangChain/LlamaIndex
+                  orchestration, and RAG knowledge base patterns to explain code/system behavior and guide
+                  debugging.</li>
+                <li>Handled a SteamVR 2.0 base-station receiver positioning task using AI-assisted embedded
+                  development for data collection, signal decoding, and upper-platform integration.</li>
+              </ul>
+              <div class="timeline-gallery">
+                <figure>
+                  <img src="assets/img/playcuit-block-programming.png" alt="Playcuit block-programming workspace with connected hardware nodes" loading="lazy" />
+                  <figcaption>Block workspace + hardware topology</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/img/playcuit-ai-response.png" alt="Playcuit AI assistant explaining why a program behavior was not triggered" loading="lazy" />
+                  <figcaption>AI assistant debugging explanation</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025.03 – 2025.07</span>
+              <h3>Tsinghua University Brain-Computer Interface Lab · Research Assistant</h3>
+              <ul>
+                <li>Supported hardware architecture design for a portable EEG system with edge AI signal
+                  processing, including component selection, multi-board design, and low-power tradeoffs.</li>
+                <li>Built cross-domain understanding of sensor signals, edge-device constraints, and AI
+                  inference needs in early-stage intelligent equipment design.</li>
               </ul>
             </div>
           </li>
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Oct. 2023 – Oct. 2024</span>
-              <h3>Morningcore Technology · PCB Engineer</h3>
+              <span class="timeline-date">2023.10 – 2024.10</span>
+              <h3>China Information and Communication Technologies Group Subsidiary · PCB Engineer</h3>
               <ul>
-                <li>Contributed to automotive-grade SoC core board projects for UAV and V2X systems and
-                  co-developed validation scripts that reduced validation cycles by 50%.</li>
-                <li>Coordinated technical requirements, manufacturing constraints, and delivery priorities.</li>
+                <li>Participated in automotive-grade SoC core-board projects for UAV and V2X applications,
+                  handling PCB design, design checks, and cross-team technical handoff.</li>
+                <li>Built and promoted internal scripted checks and review checklists that improved
+                  schematic/PCB review and repetitive verification handoff.</li>
               </ul>
             </div>
           </li>
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Feb. 2022 – Jul. 2023</span>
+              <span class="timeline-date">2022.02 – 2023.07</span>
               <h3>TP-LINK · PCB Engineer</h3>
               <ul>
-                <li>Supported 100+ consumer electronics product projects and coordinated design, production,
-                  timeline, resource, and delivery requirements across four departments.</li>
+                <li>Handled 100+ consumer electronics PCB projects including routers, cameras, switches, and
+                  power products, collaborating with mechanical, engineering, product, and manufacturing teams.</li>
               </ul>
             </div>
           </li>
           <li class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Mar. 2021 – Sep. 2021</span>
-              <h3>Shenzhen Leyi Network · Game Systems Designer</h3>
+              <span class="timeline-date">2021.03 – 2021.09</span>
+              <h3>Shenzhen Leyi Network Co., Ltd. · Game System Designer</h3>
               <ul>
-                <li>Conducted user behavior analysis and competitor research, then designed virtual economy
-                  systems, reward pacing, progression structures, and gameplay parameters.</li>
+                <li>Designed gameplay systems, numerical balance, and virtual economy based on user behavior
+                  analysis and competitor research, building product judgment from ambiguous user needs.</li>
               </ul>
             </div>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- ============ ADDITIONAL ============ -->
+    <section class="section" id="more">
+      <div class="container">
+        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">more</span>()</p>
+        <h2 class="section-title reveal">A little more</h2>
+        <div class="card-grid">
+          <div class="card reveal">
+            <h3>AI Application Interest</h3>
+            <p>Exploring AI Agent, RAG, multimodal, and hardware workflow applications that turn user needs
+              into usable prototypes — including agent-controlled KiCad/EDA workflow exploration.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Portfolio Deck</h3>
+            <p>A concise slide portfolio walking through the Playcuit AI Assistant product story, from
+              feature design to context-aware debugging UX.</p>
+            <a class="btn btn-ghost" href="https://docs.google.com/presentation/d/1BRf9QQl-jkg2S6Ami8ydu_5oWBn5sBfneaTeVpA86V4/edit?usp=sharing" target="_blank" rel="noopener">View AI product portfolio <span class="btn-arrow">↗</span></a>
+          </div>
+          <div class="card reveal">
+            <h3>Languages &amp; Awards</h3>
+            <ul>
+              <li>Native Mandarin; English for technical &amp; cross-functional collaboration</li>
+              <li>Second-Class Outstanding Social Work Scholarship</li>
+              <li>NUS AI and Telecommunication Engineering Summer Programme</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -362,8 +445,8 @@
       <div class="container contact-inner">
         <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">contact</span>()</p>
         <h2 class="contact-title reveal">Let's build something<span class="accent">.</span></h2>
-        <p class="reveal">Open to research assistant and internship roles in AI for Science, applied ML,
-          and product-facing prototyping.</p>
+        <p class="reveal">Open to LLM/agent engineering, applied ML, and AI product roles — bringing research
+          rigor and hands-on delivery across enterprise, hardware, and product contexts.</p>
         <div class="contact-actions reveal">
           <a class="btn btn-primary" href="mailto:e1553737@u.nus.edu">e1553737@u.nus.edu <span class="btn-arrow">↗</span></a>
           <a class="btn btn-ghost" href="https://github.com/evelyn77yu" target="_blank" rel="noopener">github.com/evelyn77yu <span class="btn-arrow">↗</span></a>
