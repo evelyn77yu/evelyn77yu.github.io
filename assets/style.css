@@ -669,13 +669,32 @@ a { color: inherit; }
   align-items: center;
   min-height: calc(100svh - 64px);
 }
-.closing-layout { width: 100%; display: grid; gap: 42px; }
+.closing-layout { width: 100%; display: grid; gap: 36px; }
+.closing-header {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.closing-header .contact-title { margin-bottom: 0; }
+.closing-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(38px, 7vw, 96px);
+  align-items: center;
+}
+.closing-more {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.closing-more .more-grid { width: 100%; }
 .closing-contact {
   max-width: 640px;
-  margin: 0 auto;
-  padding-top: 38px;
-  border-top: 1px solid var(--line);
+  margin: 0;
+  padding-left: clamp(24px, 4vw, 56px);
+  border-left: 1px solid var(--line);
+  text-align: left;
 }
+.closing-contact .contact-actions { justify-content: flex-start; }
 
 /* engineering background (distinct card format, not a timeline) */
 .bg-list {
@@ -762,6 +781,13 @@ a { color: inherit; }
   .mini-projects-screen { padding: 72px 0; }
   .research-featured { grid-template-columns: 1fr; gap: 42px; }
   .closing-screen { min-height: auto; display: block; }
+  .closing-content { grid-template-columns: 1fr; gap: 34px; }
+  .closing-contact {
+    max-width: none;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
 }
 
 @media (min-width: 861px) and (max-width: 1100px) {
