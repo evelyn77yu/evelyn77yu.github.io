@@ -51,49 +51,32 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* ---------- mascot: avatar stays put, googly eyes glance toward the cursor ---------- */
-  const mascotFrame = document.getElementById("mascotFrame");
-  const eyesBadge = document.getElementById("mascotEyes");
-  const pupils = eyesBadge ? eyesBadge.querySelectorAll(".pupil") : [];
-  if (mascotFrame && eyesBadge && pupils.length && !isTouch) {
+  /* ---------- mascot companion: the pet's eyes softly follow the cursor ---------- */
+  const mascotPet = document.getElementById("mascotPet");
+  const pupils = mascotPet ? mascotPet.querySelectorAll(".pupil") : [];
+  if (mascotPet && pupils.length && !isTouch && !reduceMotion) {
     let targetPupilX = 0;
     let targetPupilY = 0;
     let currentPupilX = 0;
     let currentPupilY = 0;
-    let targetTiltX = 0;
-    let targetTiltY = 0;
-    let currentTiltX = 0;
-    let currentTiltY = 0;
-
-    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
     const updateTarget = (clientX, clientY) => {
-      const rect = eyesBadge.getBoundingClientRect();
+      const rect = mascotPet.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
       const angle = Math.atan2(clientY - cy, clientX - cx);
-      targetPupilX = Math.cos(angle) * 2.6;
-      targetPupilY = Math.sin(angle) * 2.6;
-
-      const frameRect = mascotFrame.getBoundingClientRect();
-      const fcx = frameRect.left + frameRect.width / 2;
-      const fcy = frameRect.top + frameRect.height / 2;
-      targetTiltX = clamp((clientX - fcx) / 90, -6, 6);
-      targetTiltY = clamp((clientY - fcy) / 90, -6, 6);
+      targetPupilX = Math.cos(angle) * 6.2;
+      targetPupilY = Math.sin(angle) * 5.4;
     };
 
     window.addEventListener("mousemove", (e) => updateTarget(e.clientX, e.clientY), { passive: true });
 
     const animate = () => {
-      currentPupilX += (targetPupilX - currentPupilX) * 0.15;
-      currentPupilY += (targetPupilY - currentPupilY) * 0.15;
+      currentPupilX += (targetPupilX - currentPupilX) * 0.12;
+      currentPupilY += (targetPupilY - currentPupilY) * 0.12;
       pupils.forEach((pupil) => {
         pupil.style.transform = `translate(calc(-50% + ${currentPupilX}px), calc(-50% + ${currentPupilY}px))`;
       });
-
-      currentTiltX += (targetTiltX - currentTiltX) * 0.06;
-      currentTiltY += (targetTiltY - currentTiltY) * 0.06;
-      mascotFrame.style.transform = `translate(64px, -56px) translate(${currentTiltX}px, ${currentTiltY}px)`;
 
       requestAnimationFrame(animate);
     };

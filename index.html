@@ -24,8 +24,6 @@
         <span class="nav-logo-text">Yu Dian</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#about">about()</a>
-        <a href="#skills">skills()</a>
         <a href="#experience">experience()</a>
         <a href="#projects">projects()</a>
         <a href="#more">more()</a>
@@ -40,8 +38,6 @@
       </button>
     </div>
     <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
-      <a href="#about">about()</a>
-      <a href="#skills">skills()</a>
       <a href="#experience">experience()</a>
       <a href="#projects">projects()</a>
       <a href="#more">more()</a>
@@ -69,6 +65,20 @@
             <a class="btn btn-primary" href="#projects">View projects <span class="btn-arrow">→</span></a>
             <a class="btn btn-ghost" href="#experience">View experience <span class="btn-arrow">→</span></a>
           </div>
+          <div class="hero-snapshot">
+            <article class="snapshot-card snapshot-education">
+              <span class="snapshot-label">EDUCATION</span>
+              <strong>MSc AI for Science · NUS</strong>
+              <span>BEng Electronic &amp; Information Engineering · Beihang</span>
+            </article>
+            <article class="snapshot-card snapshot-skills">
+              <span class="snapshot-label">CORE TOOLKIT</span>
+              <div class="skill-pills" aria-label="Core skills">
+                <span>Agent systems</span><span>RAG &amp; retrieval</span>
+                <span>LLM evaluation</span><span>AI product delivery</span>
+              </div>
+            </article>
+          </div>
         </div>
 
         <div class="hero-visual reveal" aria-hidden="true">
@@ -78,9 +88,13 @@
           </div>
           <div class="mascot-frame" id="mascotFrame">
             <img class="mascot-avatar" src="profile-avatar.png" alt="" />
-            <div class="mascot-eyes" id="mascotEyes" aria-hidden="true">
-              <span class="eye"><span class="pupil"></span></span>
-              <span class="eye"><span class="pupil"></span></span>
+            <div class="mascot-pet" id="mascotPet" aria-hidden="true">
+              <span class="pet-ear pet-ear-left"></span><span class="pet-ear pet-ear-right"></span>
+              <span class="pet-face">
+                <span class="pet-eye"><span class="pupil"></span></span>
+                <span class="pet-eye"><span class="pupil"></span></span>
+                <span class="pet-nose"></span>
+              </span>
             </div>
           </div>
           <div class="code-card">
@@ -127,103 +141,6 @@
         <span>EEG &amp; EDGE HARDWARE</span><span class="ticker-star">✦</span>
       </div>
     </div>
-
-    <!-- ============ ABOUT / EDUCATION ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">education</span>()</p>
-        <h2 class="section-title reveal">Education</h2>
-
-        <div class="river reveal">
-          <div class="river-visual">
-            <div class="glyph-card">
-              <span class="glyph">university-of-singapore.edu</span>
-              <span class="glyph-sub">2025.08 — Present</span>
-            </div>
-          </div>
-          <div class="river-copy">
-            <h3>National University of Singapore</h3>
-            <p class="river-meta">AI for Science</p>
-            <p>Text Processing &amp; Interpretation with Machine Learning; Practical Machine Learning for
-              Scientific Discovery; Foundations of Deep Learning.</p>
-          </div>
-        </div>
-
-        <div class="river river-reverse reveal">
-          <div class="river-visual">
-            <div class="glyph-card glyph-card-alt">
-              <span class="glyph">beihang-university.edu</span>
-              <span class="glyph-sub">2016.09 — 2020.06</span>
-            </div>
-          </div>
-          <div class="river-copy">
-            <h3>Beihang University</h3>
-            <p class="river-meta">Electronic and Information Engineering</p>
-            <p>Programming in C; Electronic Circuit; Probability Theory and Mathematical Statistics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SKILLS ============ -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <p class="eyebrow reveal"><span class="eyebrow-cursor">▌</span> yudian.<span class="accent">skills</span>()</p>
-        <h2 class="section-title reveal">Core AI engineering stack</h2>
-        <p class="section-sub reveal">A focused stack for applied AI / LLM engineer roles — agents, retrieval,
-          evaluation, and full-stack delivery — proven across research, hardware, and enterprise workflows.</p>
-        <div class="skills-grid">
-          <div class="card reveal">
-            <h3>LLM &amp; Agent Engineering</h3>
-            <ul>
-              <li>Multi-step agent workflows, tool/function calling, structured outputs</li>
-              <li>Memory &amp; context design, human-in-the-loop guardrails</li>
-              <li>Shipped in enterprise verification automation, engineering assistants, and personal AI tools</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>RAG &amp; Context Engineering</h3>
-            <ul>
-              <li>LangChain/LlamaIndex retrieval pipelines, chunking, embeddings, vector databases</li>
-              <li>Context-window design and hallucination reduction</li>
-              <li>Applied to debugging assistants, knowledge retrieval, and resume/JD matching tools</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Prompting &amp; Model Evaluation</h3>
-            <ul>
-              <li>System/task prompt design, Few-shot, CoT, Self-consistency CoT</li>
-              <li>Systematic accuracy and error-case / failure-mode analysis</li>
-              <li>Turns evaluation results into iteration loops for reliability improvement</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Applied ML &amp; Deep Learning</h3>
-            <ul>
-              <li>Transformers, attention, embeddings, representation learning</li>
-              <li>PyTorch, multimodal preprocessing, Python/Pandas/NumPy/SQL analysis</li>
-              <li>Applied to medical imaging, sentiment/network data, and reasoning-reliability research</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Full-Stack AI Product Engineering</h3>
-            <ul>
-              <li>Python, JavaScript/TypeScript, React, FastAPI/Node.js</li>
-              <li>LLM APIs (OpenAI/Azure), REST, SQL/NoSQL, Docker, Git, cloud deployment</li>
-              <li>Turns model capability into working, user-facing prototypes end to end</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Cross-Domain Delivery</h3>
-            <ul>
-              <li>Stakeholder-facing problem decomposition and live workflow debugging</li>
-              <li>Documentation, traceability, and feedback-driven iteration</li>
-              <li>Proven across semiconductor verification, embedded/hardware, and product contexts</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ============ EXPERIENCE ============ -->
     <section class="section" id="experience">
