@@ -566,7 +566,7 @@ a { color: inherit; }
 /* mini card grid (data systems) */
 .mini-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .mini-card {
@@ -611,6 +611,26 @@ a { color: inherit; }
 .timeline-subtitle { font-style: italic; color: var(--muted); font-size: 0.9rem; margin: -4px 0 10px; }
 .timeline-content ul { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
 .timeline-content li + li { margin-top: 6px; }
+
+/* The opening experience view deliberately holds the two current roles in one screen. */
+.experience-section {
+  display: grid;
+  align-items: center;
+  min-height: calc(100svh - 64px);
+}
+.experience-section .container { width: 100%; }
+.experience-section .timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 52px;
+}
+.experience-section .timeline::before { display: none; }
+.experience-section .timeline-item {
+  margin: 0;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+.experience-section .timeline-dot { top: -8px; left: 0; }
 
 /* engineering background (distinct card format, not a timeline) */
 .bg-list {
@@ -688,6 +708,8 @@ a { color: inherit; }
   .river-visual { order: 0; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .mini-card-grid { grid-template-columns: 1fr; }
+  .experience-section { display: block; min-height: auto; }
+  .experience-section .timeline { grid-template-columns: 1fr; gap: 34px; }
 }
 
 @media (max-width: 600px) {
