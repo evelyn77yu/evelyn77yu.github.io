@@ -527,6 +527,7 @@ a { color: inherit; }
   gap: 20px;
   max-width: 860px;
 }
+.more-grid-single { grid-template-columns: minmax(0, 1fr); max-width: 620px; }
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
