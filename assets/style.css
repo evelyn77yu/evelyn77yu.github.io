@@ -222,7 +222,7 @@ a { color: inherit; }
   color: var(--accent);
   opacity: 0.9;
   z-index: 0;
-  transform: translate(62px, -96px);
+  transform: translate(62px, -122px);
 }
 .ring {
   position: absolute;
@@ -237,7 +237,7 @@ a { color: inherit; }
   z-index: 1;
   width: 230px;
   height: 230px;
-  transform: translate(62px, -96px);
+  transform: translate(62px, -122px);
 }
 .mascot-avatar {
   width: 100%;
@@ -385,8 +385,8 @@ a { color: inherit; }
 .terminal-panel {
   position: absolute;
   z-index: 2;
-  top: 53%;
-  left: 48%;
+  top: 49%;
+  left: 42%;
   width: min(430px, 92%);
   overflow: hidden;
   border-radius: 14px;
@@ -394,7 +394,7 @@ a { color: inherit; }
   color: #f7f3e9;
   box-shadow: 0 24px 54px -26px rgba(23, 25, 37, 0.55);
   font-family: var(--mono);
-  transform: translateX(-2%);
+  transform: translateX(-4%);
 }
 .terminal-head {
   display: flex;
