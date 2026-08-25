@@ -205,49 +205,6 @@ a { color: inherit; }
 .hero-role { font-size: 1.25rem; font-weight: 600; margin: 0 0 14px; }
 .hero-bio { max-width: 52ch; color: var(--ink-soft); margin: 0 0 30px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.hero-snapshot {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: 28px;
-  max-width: 690px;
-  margin-top: 30px;
-}
-.snapshot-card {
-  min-width: 0;
-  padding: 2px 0;
-}
-.snapshot-education {
-  padding-right: 28px;
-  border-right: 1px solid var(--line);
-}
-.snapshot-card strong,
-.snapshot-card > span:last-child {
-  display: block;
-  color: var(--ink-soft);
-  font-size: 0.83rem;
-  line-height: 1.45;
-}
-.snapshot-card strong { color: var(--ink); margin-bottom: 3px; }
-.snapshot-label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--accent-deep);
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.skill-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px 8px;
-  color: var(--ink-soft);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  line-height: 1.55;
-}
-.skill-line i { color: var(--accent); font-style: normal; }
-
 .hero-visual {
   position: relative;
   display: grid;
@@ -423,18 +380,46 @@ a { color: inherit; }
   50% { margin-bottom: 7px; }
 }
 
-.hero-status {
-  position: relative;
-  z-index: 1;
-  width: min(380px, 90%);
-  margin-top: 70px;
-  padding: 15px 0 15px 20px;
-  border-left: 2px solid var(--accent);
+.terminal-panel {
+  position: absolute;
+  z-index: 2;
+  top: 57%;
+  left: 50%;
+  width: min(430px, 92%);
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--ink);
+  color: #f7f3e9;
+  box-shadow: 0 24px 54px -26px rgba(23, 25, 37, 0.55);
+  font-family: var(--mono);
+  transform: translateX(-7%);
 }
-.hero-status strong,
-.hero-status > span:last-child { display: block; }
-.hero-status strong { font-size: 0.95rem; margin-bottom: 4px; }
-.hero-status > span:last-child { color: var(--muted); font-family: var(--mono); font-size: 0.72rem; }
+.terminal-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #aeb5c0;
+  font-size: 0.7rem;
+}
+.terminal-head > span:last-child { margin-left: 5px; }
+.terminal-dot { width: 8px; height: 8px; border-radius: 50%; }
+.terminal-dot-red { background: #f87171; }
+.terminal-dot-yellow { background: #fbbf24; }
+.terminal-dot-green { background: #4ade80; }
+.terminal-body { margin: 0; padding: 16px 18px 17px; }
+.terminal-entry + .terminal-entry { margin-top: 13px; padding-top: 13px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.terminal-entry dt {
+  margin-bottom: 5px;
+  color: #fbbf24;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+.terminal-entry dd { margin: 0; color: #f8fafc; font-size: 0.75rem; line-height: 1.5; }
+.terminal-entry dd span { color: #a5d6a7; }
 
 .info-strip { border-top: 1px solid var(--line); }
 .info-strip-inner {
@@ -689,7 +674,14 @@ a { color: inherit; }
   .ring-1 { width: 270px; height: 270px; }
   .ring-2 { width: 195px; height: 195px; }
   .mascot-pet { left: 0; right: auto; bottom: 0; transform: scale(0.62) rotate(-3deg); transform-origin: bottom left; }
-  .hero-status { margin-top: 54px; }
+  .terminal-panel {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(430px, 94%);
+    margin-top: 54px;
+    transform: none;
+  }
   .river, .river-reverse { grid-template-columns: 1fr; direction: ltr; }
   .river-visual { order: 0; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
@@ -699,15 +691,13 @@ a { color: inherit; }
 @media (max-width: 600px) {
   .hero-title { font-size: clamp(2.8rem, 15vw, 4rem); }
   .hero-kicker { font-size: 0.7rem; line-height: 1.65; }
-  .hero-snapshot { grid-template-columns: 1fr; gap: 16px; }
-  .snapshot-education { padding: 0 0 16px; border-right: 0; border-bottom: 1px solid var(--line); }
   .hero-visual { min-height: 320px; }
   .mascot-orbit { transform: translate(14px, -18px); }
   .mascot-frame { width: 150px; height: 150px; transform: translate(14px, -18px); }
   .ring-1 { width: 225px; height: 225px; }
   .ring-2 { width: 160px; height: 160px; }
   .mascot-pet { left: -7px; right: auto; bottom: -4px; transform: scale(0.54) rotate(-3deg); transform-origin: bottom left; }
-  .hero-status { width: min(310px, 96%); margin-top: 38px; }
+  .terminal-panel { width: min(330px, 96%); margin-top: 38px; }
   .skills-grid { grid-template-columns: 1fr; }
   .more-grid { grid-template-columns: 1fr; }
   .bg-list { grid-template-columns: 1fr; }
