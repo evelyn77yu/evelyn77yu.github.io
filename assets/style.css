@@ -663,13 +663,19 @@ a { color: inherit; }
 .research-featured .river-reverse > * { direction: ltr; }
 .research-featured .glyph-card { min-height: 126px; padding: 25px 22px; }
 .mini-projects-screen .group-title { margin-top: 0; }
-.closing-more,
-.closing-contact {
+.closing-screen {
   box-sizing: border-box;
   display: grid;
+  align-items: center;
+  min-height: calc(100svh - 64px);
 }
-.closing-more { min-height: 40svh; align-content: end; }
-.closing-contact { min-height: 60svh; align-content: center; }
+.closing-layout { width: 100%; display: grid; gap: 42px; }
+.closing-contact {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 38px;
+  border-top: 1px solid var(--line);
+}
 
 /* engineering background (distinct card format, not a timeline) */
 .bg-list {
@@ -755,8 +761,12 @@ a { color: inherit; }
   .research-featured-screen,
   .mini-projects-screen { padding: 72px 0; }
   .research-featured { grid-template-columns: 1fr; gap: 42px; }
-  .closing-more,
-  .closing-contact { min-height: auto; display: block; }
+  .closing-screen { min-height: auto; display: block; }
+}
+
+@media (min-width: 861px) and (max-width: 1100px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
 }
 
 @media (max-width: 600px) {
