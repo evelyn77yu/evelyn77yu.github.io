@@ -178,16 +178,16 @@ a { color: inherit; }
 @keyframes blink { 50% { opacity: 0; } }
 
 /* ===================== hero ===================== */
-.hero { padding-top: 42px; overflow: clip; }
+.hero { padding-top: 20px; overflow: clip; }
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 0.95fr;
   gap: 56px;
   align-items: center;
-  min-height: calc(100svh - 124px);
-  padding-bottom: 34px;
+  min-height: calc(100svh - 200px);
+  padding-bottom: 12px;
 }
-.hero-copy { position: relative; top: 64px; }
+.hero-copy { position: relative; top: 46px; }
 .hero-title {
   font-size: clamp(3rem, 7vw, 5.2rem);
   line-height: 0.98;
@@ -210,6 +210,7 @@ a { color: inherit; }
   --portrait-size: 250px;
   --portrait-gap: 74px;
   --terminal-shift: clamp(112px, 10vw, 144px);
+  --terminal-right-shift: clamp(144px, 12vw, 172px);
   --terminal-width: min(430px, 92%);
   position: relative;
   display: grid;
@@ -223,7 +224,7 @@ a { color: inherit; }
   position: relative;
   width: var(--terminal-width);
   padding-top: calc(var(--portrait-size) + var(--portrait-gap));
-  transform: translate(calc(-1 * var(--terminal-shift)), var(--terminal-shift));
+  transform: translate(calc(var(--terminal-right-shift) - var(--terminal-shift)), var(--terminal-shift));
 }
 .mascot-orbit {
   position: absolute;
