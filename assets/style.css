@@ -244,7 +244,7 @@ a { color: inherit; }
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 72% 40%;
+  object-position: 50% 76%;
   border: 6px solid var(--accent-light);
   box-shadow: 0 24px 46px -18px rgba(23, 25, 37, 0.45);
   background: var(--surface);
