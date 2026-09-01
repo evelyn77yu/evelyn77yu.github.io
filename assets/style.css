@@ -178,7 +178,7 @@ a { color: inherit; }
 @keyframes blink { 50% { opacity: 0; } }
 
 /* ===================== hero ===================== */
-.hero { padding-top: 20px; overflow: clip; }
+.hero { padding-top: 8px; overflow: clip; }
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 0.95fr;
@@ -187,7 +187,7 @@ a { color: inherit; }
   min-height: calc(100svh - 200px);
   padding-bottom: 12px;
 }
-.hero-copy { position: relative; top: 46px; }
+.hero-copy { position: relative; top: 0; }
 .hero-title {
   font-size: clamp(3rem, 7vw, 5.2rem);
   line-height: 0.98;
