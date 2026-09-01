@@ -235,8 +235,8 @@ a { color: inherit; }
 .mascot-frame {
   position: relative;
   z-index: 1;
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   transform: translate(62px, -122px);
 }
 .mascot-avatar {
@@ -244,7 +244,7 @@ a { color: inherit; }
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 76%;
+  object-position: 50% 50%;
   border: 6px solid var(--accent-light);
   box-shadow: 0 24px 46px -18px rgba(23, 25, 37, 0.45);
   background: var(--surface);
@@ -756,7 +756,7 @@ a { color: inherit; }
   .hero-visual { order: -1; transform: none; margin-bottom: 0; }
   .hero-visual { min-height: 380px; }
   .mascot-orbit { transform: translate(28px, -32px); }
-  .mascot-frame { width: 180px; height: 180px; transform: translate(28px, -32px); }
+  .mascot-frame { width: 196px; height: 196px; transform: translate(28px, -32px); }
   .ring-1 { width: 270px; height: 270px; }
   .ring-2 { width: 195px; height: 195px; }
   .mascot-pet { left: 0; right: auto; bottom: 0; transform: scale(0.62) rotate(-3deg); transform-origin: bottom left; }
@@ -800,7 +800,7 @@ a { color: inherit; }
   .hero-kicker { font-size: 0.7rem; line-height: 1.65; }
   .hero-visual { min-height: 320px; }
   .mascot-orbit { transform: translate(14px, -18px); }
-  .mascot-frame { width: 150px; height: 150px; transform: translate(14px, -18px); }
+  .mascot-frame { width: 160px; height: 160px; transform: translate(14px, -18px); }
   .ring-1 { width: 225px; height: 225px; }
   .ring-2 { width: 160px; height: 160px; }
   .mascot-pet { left: -7px; right: auto; bottom: -4px; transform: scale(0.54) rotate(-3deg); transform-origin: bottom left; }
